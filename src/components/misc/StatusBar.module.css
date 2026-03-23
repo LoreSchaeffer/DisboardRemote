@@ -1,0 +1,74 @@
+.statusBar {
+    width: 100%;
+    height: var(--status-bar-height);
+    background-color: var(--background-secondary);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+.boardSelect {
+    max-width: 200px;
+}
+
+.profiles {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    overflow-x: auto;
+}
+
+.profiles::-webkit-scrollbar:horizontal {
+    height: 12px;
+    background-color: transparent;
+}
+
+.profiles::-webkit-scrollbar-track:horizontal {
+    background-color: var(--background-secondary);
+    border-top: 4px solid transparent;
+    background-clip: padding-box;
+    border-radius: 12px;
+}
+
+.profiles::-webkit-scrollbar-thumb:horizontal {
+    background-color: var(--background-tertiary);
+    border-top: 4px solid transparent;
+    background-clip: padding-box;
+    border-radius: 12px;
+}
+
+.profiles::-webkit-scrollbar-thumb:horizontal:hover {
+    background-color: var(--background-tertiary);
+}
+
+.profileBtn {
+    background-color: var(--neutral-60);
+    color: var(--text-primary);
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    text-overflow: ellipsis;
+    text-wrap: nowrap;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 200ms ease;
+}
+
+.profileBtn:hover {
+    background-color: var(--neutral-55);
+    color: var(--text-primary-hover)
+}
+
+.profileBtn.active {
+    background-color: var(--primary);
+    color: var(--text-primary-active);
+}
+
+.profileBtn.active:hover {
+    background-color: var(--primary-hover);
+    color: var(--text-primary-active);
+}

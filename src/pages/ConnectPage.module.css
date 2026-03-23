@@ -1,0 +1,57 @@
+.connectionContainer {
+    width: clamp(320px, 20vw, 100vw);
+    height: clamp(400px, 50vh, 100svh);
+    background-color: var(--background-primary);
+    border: 1px solid var(--border-on-primary);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    padding: var(--padding);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+h1 {
+    font-size: 1.1rem;
+    line-height: 1.1rem;
+    margin: 5px 0 0;
+}
+
+.error {
+    border: 1px solid var(--red-20);
+    padding: 5px;
+    border-radius: 7px;
+    margin-bottom: 10px;
+}
+
+.errorTitle {
+    font-weight: 600;
+    color: var(--red-25);
+}
+
+.errorMessage {
+    color: var(--red-20);
+    font-size: 0.9rem;
+}
+
+.row:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.col {
+    align-items: flex-end;
+}
+
+.input {
+    max-width: 95%;
+}
+
+.submit {
+    margin-top: auto;
+    margin-left: auto;
+}
