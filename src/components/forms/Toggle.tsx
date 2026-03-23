@@ -1,7 +1,7 @@
-import {forwardRef, type InputHTMLAttributes} from 'react';
+import {forwardRef, type InputHTMLAttributes, useId} from 'react';
 import styles from './Toggle.module.css';
 import {clsx} from 'clsx';
-import type {Variant} from "../../types/common";
+import type {Variant} from "../../types";
 
 type ToggleProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'type'> & {
     variant?: Variant
@@ -17,7 +17,9 @@ const Toggle = forwardRef<HTMLInputElement, ToggleProps>((
         style,
         ...props
     }, ref) => {
-    const inputId = id || `toggle-${Math.random().toString(36)}`;
+    const generatedId = useId();
+
+    const inputId = id || generatedId;
 
     return (
         <label
